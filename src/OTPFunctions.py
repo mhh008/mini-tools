@@ -3,6 +3,19 @@ import os
 
 
 class OTPFunctions:
+    """
+    Naming convention for the Files encrypting / decrypting and the key files
+
+        hide:
+            enc:    no renaming because that is a normal file, behind that a other file is stored with the key file
+            key:    original.enc.key
+            dec:    original        (last 8 chars from key file get deleted)
+        OTP:
+            enc:    original.enc
+            key:    original.enc.key
+            dec:    original    (last 4 chars from enc file get deleted)
+    """
+
 
     def __init__(self, master):
         self.origFile = ""
